@@ -31,12 +31,12 @@ class BookController {
 	}
 
 	@GetMapping
-	Iterable<Book> getAllBooks(){
+	public Iterable<Book> getAllBooks(){
 		return bookRepository.findAll();
 	}
 
 	@PostMapping
-	Book addNewBook(@RequestBody Book book) {
+	public Book addNewBook(@RequestBody Book book) {
 		return bookRepository.save(book);
 	}
 }
